@@ -70,6 +70,11 @@ button {
     cursor: pointer;
 }
 
+a {
+    text-decoration: none;
+    color: white;
+}
+
 .red-square,
 .blue-square,
 .white-square {
@@ -94,7 +99,7 @@ button {
     width: 100%;
 }
 
-.top-bar > img {
+.top-bar > a > img {
     margin: 0 0 0 20px;
 }
 
