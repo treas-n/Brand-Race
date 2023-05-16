@@ -1,0 +1,17 @@
+#get-started {
+    grid-column: 5/ 9;
+    grid-row: 3;
+}
+
+#welcome {
+    grid-column: 6 / 8;
+}
+
+#landing-img {
+    grid-column: 3 / 11;
+}
+
+main {
+    grid-template-rows: 3fr 3fr 3fr 1fr;
+    grid-template-columns: repeat(12, 1fr);
+}

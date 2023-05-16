@@ -1,0 +1,44 @@
+main {
+    grid-template-rows: 1fr 1fr 4fr 1fr;
+    grid-template-columns: repeat(12, 1fr);
+}
+
+#choice {
+    display: flex;
+    grid-column: 3 / 11;
+    width: 100%;
+    height: 100%;
+    justify-content: space-between;
+}
+
+#join, 
+#create {
+    width: 49%;
+    height: 100%;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#join {
+    background-color: var(--red);
+}
+ 
+#create {
+    background-color: var(--blue);
+}
+
+#join:hover,
+#create:hover {
+    filter: drop-shadow(2px 4px 10px var(--white));
+    border-bottom: 4px solid var(--white);
+    cursor: pointer;
+}
+
+#join > span, 
+#create > span {
+    font-size: 56pt;
+    font-weight: var(--bold);
+    display: inline-block;
+}
