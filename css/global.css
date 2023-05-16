@@ -56,6 +56,7 @@ button {
     border: none;
     border-radius: 20px;
     font-size: 36px;
+    cursor: pointer;
 }
 
 #get-started {
