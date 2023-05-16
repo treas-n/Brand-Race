@@ -57,7 +57,7 @@ main > * {
     justify-self: center;
 }
 
-button {
+button, .button {
     background-color: var(--blue);
     font-family: Chakra Petch;
     font-weight: var(--bold);
@@ -104,5 +104,10 @@ a {
 }
 
 .instruction {
+    grid-column: 3 / 11;
+}
+
+.text-input {
+    height: 75%;
     grid-column: 3 / 11;
 }

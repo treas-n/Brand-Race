@@ -12,6 +12,6 @@
 }
 
 main {
-    grid-template-rows: 3fr 3fr 3fr 1fr;
+    grid-template-rows: 160px 3fr 3fr 1fr;
     grid-template-columns: repeat(12, 1fr);
 }
