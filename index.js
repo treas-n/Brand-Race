@@ -42,8 +42,8 @@ app.post('/getReady', (request, response) => {
     response.sendFile(__dirname + '/getReady.html');
 });
 
-app.get('/game', (response, request) => {
-    response.sendFile(__dirname + 'game.html');
+app.get('/game', (request, response) => {
+    response.sendFile(__dirname + '/game.html');
 });
 
 server.listen(3001, () => {

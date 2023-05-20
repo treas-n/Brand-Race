@@ -1,0 +1,66 @@
+main {
+    grid-template-rows: 2fr 1fr 1fr 1fr 1fr 1fr 1fr 2fr;
+    grid-template-columns: repeat(12, 1fr);
+}
+
+.footer {
+    grid-row: 8;
+}
+
+.current-round {
+    grid-row: 8;
+    grid-column: 6 / 8;
+    display: inline-flex;
+    justify-content: center;
+    width: 100%;
+    opacity: .4;
+    font-size: large;
+}
+
+.top-bar {
+    display: inline-flex;
+    justify-content: space-between;
+    align-items: center;
+    /*height: 100%;*/
+}
+
+.leaderboard {
+    display: inline-flex;
+    flex-direction: column;
+    width: 10%;
+    height: 100%;
+}
+
+.player-colours,
+.current-score {
+    width: 15px;
+}
+
+.p1, 
+.p2 {
+    display: inline-flex;
+    justify-content: flex-end;
+    gap: 15px;
+    width: 150px;
+    height: 50%;
+}
+
+.p-one {
+    background-color: var(--red);
+    width: 5px;
+}
+
+.p-two {
+    background-color: var(--blue);
+    width: 5px;
+}
+
+.player-colours {
+    display: inline;
+    
+}
+
+.logo-to-guess {
+    grid-column: 5 / 9;
+    grid-row: 2 / 5;
+}
