@@ -1,0 +1,53 @@
+main {
+    grid-template-rows: 2fr 1fr 1fr 1fr 1fr 1fr 1fr 2fr;
+    grid-template-columns: repeat(12, 1fr);
+}
+
+.footer {
+    grid-row-start: 8;
+}
+
+.top-bar {
+    justify-content: space-between;
+}
+
+#game-ID-wrapper {
+    margin-right: 15%;
+}
+
+#players {
+    display: flex;
+    grid-column: 4 / 10;
+    grid-row: 3;
+    width: 100%;
+    height: 100%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.player-colours {
+    width: 5px;
+    height: 60%;
+}
+
+.p-two {
+    background-color: var(--red);
+}
+
+.p-one {
+    background-color: var(--blue);
+}
+
+#ready-text {
+    display: inline-flex;
+    grid-row: 4;
+    grid-column: 6/8;
+    align-self: center;
+    width: 100%;
+    justify-content: center;
+}
+
+#start-button {
+    grid-row: 5;
+    grid-column: 5 /9; 
+}
