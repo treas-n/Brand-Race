@@ -9,50 +9,58 @@ const path = require('path');
 
 /* Navigation */
 app.get('/', (request, response) => {
-    response.sendFile(__dirname + '/index.html');
+    response.sendFile(__dirname + '/html/index.html');
 });
 
 app.get('/gameType', (request, response) => {
-    response.sendFile(__dirname + '/gameType.html');
+    response.sendFile(__dirname + '/html/gameType.html');
 })
 
 app.get('/createRace', (request, response) => {
-    response.sendFile(__dirname + '/createRace.html');
+    response.sendFile(__dirname + '/html/createRace.html');
 });
 
 app.get('/joinRace', (request, response) => {
-    response.sendFile(__dirname + '/joinRace.html');
+    response.sendFile(__dirname + '/html/joinRace.html');
 });
 
-app.post ('/gameDetails', (request, response) => {
+app.get ('/gameDetails', (request, response) => {
     /* Validate and handle form submission */
-    response.sendFile(__dirname + '/gameDetails.html') ;
+    response.sendFile(__dirname + '/html/gameDetails.html') ;
+    var timeout = setTimeout(nextPage, 3000);
 
-    var timeout = setTimeout(function () {
-        app.get('/getReady', (req, res) => {
-            res.sendFile(__dirname + '/getReady.html');
-            clearTimeout(timeout);
-        });
-    }, 3000);
 
+    function nextPage() {
+        response.sendFile(__dirname + '/getReady.html');
+        clearTimeout(timeout);
+    }
 
 });
 
 app.post('/getReady', (request, response) => {
-    response.sendFile(__dirname + '/getReady.html');
+    response.sendFile(__dirname + '/html/getReady.html');
 });
 
 app.get('/game', (request, response) => {
-    response.sendFile(__dirname + '/game.html');
+    response.sendFile(__dirname + '/html/game.html');
 });
 
 server.listen(3001, () => {
     console.log('listening on *:3001');
 })
 
-/* Serve CSS files */
+/* Serve CSS files 
 const cssDirectory = path.join(__dirname , 'css');
 const serveStaticCSS = express.static(cssDirectory);
 const cssRoutePath = '/css';
 
 app.use(cssRoutePath, serveStaticCSS);
+
+/* Serve other JS files 
+const jsDirectory = path.join(__dirname , 'js');
+const serveStaticJS = express.static(jsDirectory);
+const jsRoutePath = '/js';
+
+app.use(jsRoutePath, serveStaticJS);*/
+
+app.use(express.static('public'));
