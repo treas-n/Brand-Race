@@ -5,8 +5,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../public/css/global.css"> 
-    <link rel="stylesheet" href="../public/css/gameDetails.css">
+    <link rel="stylesheet" href="/css/global.css"> 
+    <link rel="stylesheet" href="/css/gameDetails.css">
     <title>Waiting for player to join</title>
 </head>
 
@@ -20,11 +20,16 @@
             <p>Waiting for 2nd player...</p>
         </div>
         <div class="footer">
-            <div class="blue-square"><a href="/getReady"> as</a></div>
+            <div class="blue-square"><a href="/getReady">as</a></div>
             <div class="white-square"></div>
             <div class="red-square"></div>
         </div>
     </main>
+
+    <script src="/jquery/jquery.min.js"></script>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="/js/gameDetails.js"></script>
+    <script src="/index.js"></script>
 </body>
 
 </html>
