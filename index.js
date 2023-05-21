@@ -7,6 +7,9 @@ const { Server } = require('socket.io');
 const io = new Server(server);
 const path = require('path');
 
+
+app.use(express.static('public'));
+
 /* Navigation */
 app.get('/', (request, response) => {
     response.sendFile(__dirname + '/html/index.html');
@@ -62,5 +65,3 @@ const serveStaticJS = express.static(jsDirectory);
 const jsRoutePath = '/js';
 
 app.use(jsRoutePath, serveStaticJS);*/
-
-app.use(express.static('public'));
