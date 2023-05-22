@@ -56,8 +56,6 @@ app.get('/game', (request, response) => {
 
 io.on('connection', (socket) => {
     console.log('-- A user connected');
-
-    
     
     
     socket.on('gameDetails', (username, gameID) => {
